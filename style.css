@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+body, #app {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  --item-height: 4rem;
+  --item-width: 15vw;
+  --left-margin: 3rem;
+  --border-color: #EEEEEE;
+}
+
+main {
+  position: relative;
+  width: 90%;
+}
+
+li, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#timeline {
+  margin-top: var(--item-height);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+#timeline li {
+  position: relative;
+  height: var(--item-height);
+}
+
+#timeline li::after {
+  content: "";
+  height: 1px;
+  background-color: var(--border-color);
+  position: absolute;
+  bottom: 0;
+  left: var(--left-margin);
+  width: calc(100% - var(--left-margin));
+}
+
+
+#dayevents   {
+  margin-left: var(--left-margin);
+}
+
+#dayevents .day-name {
+  height: var(--item-height);
+  border-bottom: solid 1px var(--border-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dayevents ul  {
+  vertical-align: baseline;
+  display: flex;
+}
+
+#dayevents li.day  {
+  border: solid 1px var(--border-color);
+  width: 20%;
+  min-width: 6em;  
+}
+
+ul.dayevents-list {
+  height: calc(var(--item-height) * 10);
+}
