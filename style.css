@@ -78,4 +78,24 @@ li, ul {
 
 ul.dayevents-list {
   height: calc(var(--item-height) * 10);
+  position: relative;
+}
+
+.event  {
+  width: var(--item-width);
+  position: absolute;
+  box-sizing: border-box;
+  padding: 0.3vw;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+/* calendars */
+
+.event.pink  {
+  background: linear-gradient(silver, pink);
+}
+
+.event.blue  {
+  background: linear-gradient(silver, rgb(34, 34, 68));
 }
